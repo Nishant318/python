@@ -1,3 +1,6 @@
-a=float(input("enter dollar"))
-b=a*1.458
-print(b)
+N = int(input("Enter the number of Fibonacci terms: "))
+a, b = 0, 1
+for _ in range(N):
+    print(a, end=' ')
+    a, b = b, a + b
+print()
