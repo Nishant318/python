@@ -1,11 +1,13 @@
-n = int(input("Enter a number: "))
-is_prime = n > 1 and all(n % i != 0 for i in range(2, int(n**0.5) + 1))
-print("Prime:", is_prime)
-is_perfect = n == sum(i for i in range(1, n) if n % i == 0)
-print("Perfect:", is_perfect)
-is_armstrong = n == sum(int(d)**len(str(n)) for d in str(n))
-print("Armstrong:", is_armstrong)
-is_palindrome = str(n) == str(n)[::-1]
-print("Palindrome:", is_palindrome)
-is_automorphic = str(n**2).endswith(str(n))
-print("Automorphic:", is_automorphic)
+def remove_substring(main_str, sub_str):
+     result = ''
+     i = 0
+     while i < len(main_str):
+         if main_str[i:i+len(sub_str)] == sub_str:
+             i += len(sub_str)
+         else:
+             result += main_str[i]
+             i += 1
+     return result
+ 
+     main_str = input()
+     sub_str = input()
